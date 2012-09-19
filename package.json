@@ -1,16 +1,13 @@
 {
-  "author": "David Pettifer <david.pettifer@dizzy.co.uk>",
-  "name": "dizzy.co.uk",
-  "description": "A list of things",
+  "name": "application-name",
   "version": "0.0.1",
-  "homepage": "www.dizzy.co.uk",
-  "main": "index.js",
-  "dependencies": {
-    "express": "3.0.0rc5"
+  "private": true,
+  "scripts": {
+    "start": "node app"
   },
-  "devDependencies": {},
-  "optionalDependencies": {},
-  "engines": {
-    "node": "0.6.20"
+  "dependencies": {
+    "express": "3.0.0rc4",
+    "jade": "*",
+    "ejs": "~0.8.3"
   }
 }
