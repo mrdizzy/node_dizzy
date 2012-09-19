@@ -1,0 +1,16 @@
+{
+  "author": "David Pettifer <david.pettifer@dizzy.co.uk>",
+  "name": "dizzy.co.uk",
+  "description": "A list of things",
+  "version": "0.0.1",
+  "homepage": "www.dizzy.co.uk",
+  "main": "index.js",
+  "dependencies": {
+    "express": "~3.0.0rc4"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
