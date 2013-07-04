@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+
+<title>Dizzy</title>
+<style type="text/css">
+@font-face {  font-family:"GillItalic"; src:  url('gillsansmtpro-lightitalic-webfont.woff?') format('woff'); }
+@font-face {  font-family:"Gill"; src:  url('gillsansmtpro-medium-webfont.woff?') format('woff'); }
+@font-face {  font-family:"GillLight"; src:  url('gillsansmtpro-light-webfont.woff?') format('woff'); }
+@font-face {  font-family:"Garamond"; src:  url('garamond-reg-webfont.woff?') format('woff'); }
+@font-face {  font-family:"GaramondItalic"; src:  url('garamond-italic-webfont.woff?') format('woff'); }
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body { background-image: url('images/new_back.png');  line-height:1.5em; font: 1em "GillLight" normal;}
+
+h1 { margin-left:3%; font-size:3em; padding-bottom:0.25em; margin-bottom:0.25em; text-align:center; border-bottom:1px solid grey; font:72px "Gill" normal;}
+h2 {font: 2.4em "GaramondItalic" normal; text-align:center; padding-bottom:0.5em; }
+h3 { font:1.4em "GillItalic" normal; border:1px dashed grey; padding:0.75em; line-height:130%;width:90%; margin-left:3%; margin-bottom:0.5em; }
+h4 { font: 1.6em "Garamond" normal; padding-left:3%; font-size:1.6em; border-bottom:1px solid grey; text-align:left; margin-bottom:1em; padding-bottom:0.5em;} 
+h5 { font-size:1em; letter-spacing: 0.4em; text-align:center; border-bottom:1px dashed grey; margin-bottom:0.25em; padding-bottom:0.5em;}
+
+ul, p { text-ident:10px; margin-bottom:1.5em; font-size: 1.1em; line-height:1.5em; margin-left:3%; margin-right:15%;}
+li { list-style-type: disc; margin-left:1em; }
+b {font:150% "GaramondItalic" normal;}
+i { font-style: italic; }
+
+blockquote { font:1.5em "GaramondItalic" normal;width:25%; float:right;  margin-left: 0.5em; line-height:140%; }
+
+.hex { width:13px; height:13px; float:left; background-image:url('images/hex.png'); margin-top:4px;}
+.active { background-position: 13px -13px; }
+.hex:hover { background-position: 13px -13px; }
+
+#page_container {  width:974px; margin:auto; background-color:white; border: 0 1px 0 1px solid grey; }
+#header { padding-left:3%; padding-top:5px; padding-bottom:0.25em; border-bottom:1px dotted grey; margin-bottom:1em; }
+.spiro { margin-left:3%; width: 90%; text-align:center; }
+.nav { float:left; width: 16%; text-align:center; }
+#navigation { padding-top:25px;height:50px; }
+#beautiful { display:block; float:right; margin-top:70px; margin-right:10px; }
+
+#smalllogo { float:right; padding-right:40px; padding-top:10px; }
+/* MAIN SECTIONS */
+#section1 { float:left; width:20%; padding-top:2em; padding-left:2%;  clear:both; }
+    #section1 h5 {  text-align:left; border: 0; letter-spacing:0.25em; font-size:1em;   padding-bottom:0;}
+#section2 { margin-left: 20%; border-left:1px dotted grey; }
+
+/* FOOTER */
+#footer { border-top:1px solid grey;display:block; text-align:center; } 
+#footer_man { float:left; padding-left:20px; }
+</style>
+
+<body>
+<div id="page_container">
+    <div id="header" style="height:110px">
+        <div id="logo" style="float:left;text-align:center;">
+            <img src="images/smalllogo.png" />
+        </div>
+        <div id="navigation">
+            <div class="nav"><img src="images/nav/cheats_over.png" /></div>
+            <div class="nav"><img src="images/nav/contact_over.png" /></div>
+            <div class="nav"><img src="images/nav/home_over.png" /></div>
+            <div class="nav"><img src="images/nav/portfolio_over.png" /></div>
+            <div class="nav"><img src="images/nav/rails_over.png" /></div>
+        </div>
+    </div>        
+          
+          
+    <!-- SECTION 1 ------------------------------------------------------------->
+    <div id="section1">
+        <h5><div class="hex active"></div> EPISODE 1</h5>
+        <p>&mdash; What is node.js?</p>
+        <h5><div class="hex"></div> EPISODE 2</h5>
+        <p>&mdash;  node.js everywhere</p>
+        <h5><div class="hex"></div> EPISODE 3</h5>
+        <p>&mdash; Your first application</p>
+        <h5><div class="hex"></div> EPISODE 4</h5>
+        <p>&mdash; A JavaScript refresher</p>
+    </div>
+    
+    
+    <!-- SECTION 2 ------------------------------------------------------------->
+    <div id="section2">
+        <h5>EPISODE 1</h5>
+        
+        <h1>BEGINNER'S GUIDE<br/> TO NODE.JS</h1>
+        
+        <h2>What is node.js?</h2>
+        
+        <h3>There is something mysterious about node.js... just what <i>is</i> it? So it's JavaScript on the server side? But someone said it is a Web server? And what about this asynchronous thing everyone keeps going on about? Let me explain... </h3>
+        
+        <div class="spiro"><img src="images/spiro.png" /></div>
+        <p>When I first heard about node.js, I wasn't sure <i>exactly</i> what it was. In fact, the one thing that drew me to node.js 
+        more than anything else was the concept of server-side JavaScript: the idea of being able to use one language 
+        on both the server and the browser really appealed to me. But it turned out that server-side JavaScript is not really what node.js is all 
+        about: that it happens to be JavaScript on the server is serendipitous more than anything else. So before we go into detail, 
+        let's first get an idea of what node.js is, and what it isn't... </p>
+        <div style="width:45%;float:left; margin:1em; padding:1em; border:1px solid grey; border-radius:5px;">
+        
+        <h4>What it is...</h4>
+        <ul>
+        <li><b>It's a JavaScript interpreter that's separate from the Web browser.</b> It executes script files written in JavaScript just like PHP or Ruby execute 
+        file written in PHP or Ruby, and it adds features that JavaScript in the browser doesn't have: for example, the ability to 
+        read and write to the filesystem.</li>
+        <li><b>It's a server</b>. Using its built-in modules, node can easily be used as a server. Not just a Web server&mdash;it <i>can</i> and often <i>is</i> a Web server, but it can also be used as any other server too.</li>
+        <li><b>It's asynchronous.</b> A-what? In short, this means that it is great for applications that require concurrent connections, such as anything that is being used in real-time simultaneously by many users: chat rooms, for example. We'll explain more in-depth later.</li>
+        </ul>
+        
+        </div>
+        
+        <div style="width:35%;margin:1em; padding:1em; border:1px solid grey; border-radius:5px;float:right;">
+        <h4>What it isn't...</h4>
+        <ul>
+        <li><b>A framework.</b> Do you remember when Ruby on Rails first came out, 
+        people didn't know the difference between <i>Ruby</i> and <i>Rails</i>? It took a while for 
+        newbies to figure out that <i>Rails</i> is a framework programmed in <i>Ruby</i>. If we are 
+        comparing node.js to <i>Ruby On Rails</i>, then node.js is more like Ruby than Rails.
+        But there are frameworks, just like Rails, that can run on node.js.</li>
+        </ul>
+        </div>
+        
+        <p style="clear:both;">So now that we've cleared up what node.js is, and what it isn't, let's look at each of these aspects
+        in a little more detail.
+        <h4>It's a JavaScript interpreter.</h2>
+        <p> You're probably used to using something like Apache as a Web server. When an incoming request comes in, Apache executes a PHP script which returns a response to Apache which then sends it back to the browser. So Apache acts like a middleman between the incoming request and the PHP interpreter. With node.js, there is no middle man. The core modules allow you to create scripts that respond to requests directly. 
+        <h4>It's fundamentally asynchronous.</h2>
+        <p>So let's imagine that you have a PHP script that connects to a database to retrieve a list of customers and format an HTML page as a response. That PHP script might take 1 second to run, during which time it cannot service any other requests for that HTML page. 
+        <p>
+        So what do we do when another request comes in?
+        </p>
+        <p>
+        The usual solution to this problem is to execute another "instance" of the same PHP script which can service that request. Now imagine that we have 10 requests all coming in at the same time ("concurrent requests"): we would therefore need to execute 10 instances of the same PHP script on order to deal with the requests rather than letting them queue up. </p>
+        <blockquote>Imagine if during this time our script could actually get on and do other stuff?</blockquote>
+        <p>
+        Now let's imagine that in our script we make a call to the database. This is known as an IO (input/output) operation.  We send a request for information out to the database and then we wait for it to respond. And that's a big drain on time: "we wait for it to respond". IO operations, such as writing a file to a disk or talking to a database, are notoriously time consuming. During that time, our script is doing exactly nothing but sitting there waiting for the database to get back to it, while at the same time requests are coming in. 
+        </p>
+        <p>
+        Imagine if during this time our script could actually get on and do other stuff, like begin to respond to these other incoming requests while it waits for a response from the database? </p>
+        
+        <p>Hooray! Welcome to asynchronous programming.</p>
+    </div>
+    
+    <!-- FOOTER ------------------------------------------------------------->
+    <div id="footer">
+        <div id="footer_man">
+            <img id="footer_man" src="images/footer_man.png" />
+        </div>
+
+        <img id="spiral_circle" src="images/spiral_circle.png" />
+        <div id="smalllogo">
+           <img id="spiral_circle" src="images/smalllogo.png" />
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript"> Cufon.now(); </script>
+</html>
