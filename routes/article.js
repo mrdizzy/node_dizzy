@@ -13,7 +13,7 @@ exports.index = function(req, res) {
   
 
   db.view('types/by_article', function(err, response) {
-        res.render('views/article/index', { articles: response.toArray()})
+        res.render('article/index', { articles: response.toArray()})
     })
         
 }

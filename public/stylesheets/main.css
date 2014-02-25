@@ -1,0 +1,19 @@
+@font-face { font-family:"TP"; src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff'); }
+
+body { background-image:url('/images/background_pattern.png'); background-size:52px;}
+
+#main_container { width:85%;margin:0 auto;padding-top:1em;background-color:white;border-left:1px solid black;border-right:1px solid black; box-shadow:5px 5px 5px 3px #ccc}
+header { text-align:center;border-top:1px solid black;}
+section.line { margin:0 auto; margin-top:1em;padding-top:3em;border-top:1px solid black; width:85%; text-align:center; padding-bottom:2em;border-bottom:1px solid black;margin-bottom:0;}
+article { margin-left:4em;margin-right:4em;}
+h1 { font: 3.2em normal 'TP';font-weight:500; border-top:1px solid black;border-bottom:1px solid black; margin-top:0.2em;padding-top:0.5em;padding-bottom:1em;}
+h2 { font: 1.5em normal 'EB Garamond'; line-height:1.3em;margin-right:3em;text-indent:4em;}
+h3 { font: 1.5em normal 'TP'; text-align:center;padding-top:0.25em;padding-bottom:0.25em; }
+p { font: 1.2em normal 'EB Garamond';text-indent:5em;line-height:1.5em;text-indent:0em;margin-top:1.5em;margin-right:3em;}
+pre { font-size:1em;line-height:1.4em; font-family: 'Courier New'}
+.dropcap{
+    float:left;
+    margin-top:0.2em;
+    font-size:3.5em;
+    margin-right:0.1em;
+    }

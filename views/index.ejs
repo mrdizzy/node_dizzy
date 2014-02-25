@@ -1,4 +1,46 @@
-<html>
+<% include head %>
+<div id="main_container">
+<header>
+<img src="images/logo.svg" />
+</header>
+<section class="line">
+    <img src="images/shell.svg" />
+</section>
+<article>
+<h1>Did you ever know that you're my hero?</h1>
+<h2><span class="date" style="font-variant:small-caps;font-size:0.75em;letter-spacing:0.05em">Thursday, 20th July 2013</span> <img src="images/swirl.svg" style="margin-left:0.2em;margin-right:0.2em;"/> Sed nulla sapien, accumsan quis lectus sed, luctus pellentesque ligula. Maecenas ornare, elit eget vestibulum dignissim, augue orci dignissim purus, non sodales dui neque a nisl. Quisque mattis diam sapien, sit amet egestas mauris imperdiet vitae. </h2>
+<p><span class="dropcap">L</span> orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et quam odio. Suspendisse suscipit nulla nec nisi scelerisque aliquam. Phasellus mattis odio sed varius lacinia. Sed pellentesque et nisi ut malesuada. Nunc rutrum orci et justo laoreet molestie. Vivamus eleifend non quam eu luctus. Cras bibendum porta cursus. Proin nec rutrum ante. Curabitur quis molestie orci. Sed nulla sapien, accumsan quis lectus sed, luctus pellentesque ligula. Maecenas ornare, elit eget vestibulum dignissim, augue orci dignissim purus, non sodales dui neque a nisl. Quisque mattis diam sapien, sit amet egestas mauris imperdiet vitae. Praesent sollicitudin interdum mauris et dignissim.</p>
 
-Welcome to express
-</html>
+<pre>
+
+var results = []
+
+Object.keys(colours).forEach(function(hex) {
+  var without_hash = hex.substring(1);
+  var r = parseInt(without_hash.substring(0,2),16)/255;
+  var g = parseInt(without_hash.substring(2,4),16)/255;
+  var b = parseInt(without_hash.substring(4,6),16)/255;
+  
+  /* Getting the Max and Min values for Chroma. */
+  var max = Math.max.apply(Math, [r,g,b]);
+  var min = Math.min.apply(Math, [r,g,b]);
+
+  /* Variables for HSV value of hex color. */
+  var chr = max-min;
+  var hue = 0;
+  var val = max;
+  var sat = 0;
+    
+</pre>
+
+<h3><span style="display:inline-block;border-bottom:1px solid black;padding-bottom:2em;">What is node.js?</span></h3>
+
+<p>Aliquam neque dolor, elementum vel iaculis id, pellentesque eu erat. Praesent faucibus eros eget congue pharetra. Phasellus adipiscing condimentum ipsum, eget facilisis ipsum. Aenean laoreet nibh fermentum tincidunt faucibus. Cras ac dolor sed dolor molestie ultricies. Mauris elementum sodales placerat. In at mattis sapien. Etiam blandit eget mauris sed tempor. Fusce ultrices lacus porta luctus euismod. Nulla ultricies nunc nibh, consectetur aliquam nulla pulvinar ac. Aliquam viverra tortor vitae dictum egestas. Mauris aliquet, nibh vel feugiat sagittis, mauris dolor ultrices felis, tincidunt scelerisque magna ante vel purus. Ut vestibulum purus et pellentesque suscipit.</p>
+
+<p>Donec interdum tortor non nisl blandit, eu bibendum lorem aliquam. Sed tincidunt lacus vitae pellentesque venenatis. Suspendisse eu lacus arcu. Duis iaculis nibh libero, at tincidunt ligula lacinia vitae. Integer lacinia aliquet erat eu dapibus. Nunc porta, lectus a varius laoreet, neque enim dignissim turpis, et dapibus nibh odio adipiscing felis. Cras lobortis nunc sodales orci gravida egestas. Curabitur sagittis id elit sit amet interdum. Integer ullamcorper tellus sit amet accumsan vehicula. Nam id convallis libero. Nunc eu odio eu dui interdum porta. Ut eu orci nulla. Aenean sed hendrerit purus.</p>
+
+<p>Aliquam a risus elementum, sodales magna a, dignissim diam. Nullam vitae odio vel velit vestibulum vehicula. Nunc dolor justo, feugiat et erat id, facilisis dictum velit. Sed laoreet risus ut felis scelerisque, sit amet iaculis odio dapibus. Sed id neque et felis sollicitudin varius. Aliquam vel justo metus. Nam egestas ante nisl, non pellentesque arcu ornare sed. Integer commodo, ipsum placerat vulputate cursus, lacus justo imperdiet arcu, eget vulputate dolor lacus eu nisl. Mauris sed tortor tempus, congue orci non, posuere lacus. Quisque vel quam placerat, cursus est ut, sollicitudin turpis. Mauris scelerisque purus id rhoncus pulvinar. Suspendisse elementum volutpat suscipit.</p>
+</article>
+</div>
+
+<% include foot %>
