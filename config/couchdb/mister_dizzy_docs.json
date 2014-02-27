@@ -1,1 +1,1 @@
-[{ "_id": "1", "title": "Introduction to node.js", "content": "Content"}]
+[{ "_id": "1", "title": "Introduction to node.js", "type": "article", "content": "Content"}, {"_id": "2", "title": "Another article", "type": "article", "content": "Some more content here"}]

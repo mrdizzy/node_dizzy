@@ -29,11 +29,15 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
+app.get('/articles.json', function(req, res) {
+  console.log("json")
+})
+app.put('/articles/:id/:rev', function(req, res) {
+  console.log(req.params.id, req.params.rev, req.body)
+})
 app.get('/articles', article.index)
 
 app.get('/', routes.index);
-app.get('/code', code.index);
-app.post('/code', code.create)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
