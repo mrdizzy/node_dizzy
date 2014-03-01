@@ -13,6 +13,12 @@ exports.index = function(req, res) {
 }
 
 exports.update = function(req, res) {
+db.save(req.body, function(err, response) {
+        console.log(err, response)
+})
         
-        
+}
+
+exports.create = function(req, res) {
+        console.log(req.body)
 }

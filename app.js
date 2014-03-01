@@ -10,7 +10,13 @@ code = require('./routes/code')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
+  var hljs = require('highlight.js'),
+markdown = require('marked');
+var cradle = require('cradle'),
+connection = require('./config/couchdb/connection');
 
+cradle = new(cradle.Connection)(connection.host, connection.port, { auth: { username: connection.username, password: connection.password}});
+var db = cradle.database(connection.database)
 var app = express();
 
 app.configure(function(){
@@ -32,11 +38,23 @@ app.configure('development', function(){
 app.get('/articles.json', function(req, res) {
   console.log("json")
 })
-app.put('/articles/:id/:rev', function(req, res) {
+app.put('/articles/:id/:rev', article.update)
+app.post('/articles/:id/:rev', function(req, res) {
   console.log(req.params.id, req.params.rev, req.body)
 })
 app.get('/articles', article.index)
-
+app.get('/articles/:id', function(req, res) {
+  db.get(req.params.id, function(err, doc) {
+    markdown.setOptions({highlight: function(code) {
+        return hljs.highlightAuto(code).value
+    }})
+    markdown(doc.content, function(err, content) {
+        if (err) throw err;
+        
+    res.render("article/show", { content: content})
+    })
+  })
+})
 app.get('/', routes.index);
 
 http.createServer(app).listen(app.get('port'), function(){
