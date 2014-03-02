@@ -1,11 +1,106 @@
 <html>
+    <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js
+"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.syphon/0.4.1/backbone.syphon.min.js"></script>
+
+<script type="text/template" id="selected_form">
+<form>
+    <input type="text" name="title" value="{{title}}"></input>
+    <textarea name="content">{{content}}</textarea>
+    <input type="submit"></input>
+    </form>
+</script>
     
+    <script type="text/javascript">
+    Backbone.CouchDB = Backbone.Model.extend({
+        url: function() {
+        var url = Backbone.Model.prototype.url.apply(this, arguments)
+        return this.isNew() ? url : (url + "/" + this.get("_rev"));
+        }
+    })
+    var Article = Backbone.CouchDB.extend({
+    idAttribute: "_id"})
+    var Articles = Backbone.Collection.extend({
+        url: "/articles",
+        model: Article
+    })
+    var articles = new Articles(<%- JSON.stringify(articles) %>)
+    console.log(articles.models[0].id)
+    </script>
+    </head>
     <body>
-        <ul>
-        <% articles.forEach(function(article) { %>
-            
-            <li><%= article.title %></li>
-            <% }) %>
-        </ul>
-    </body>
+       <div id="articles"></div>
+       <div id="selected_article"></div>
+           </body>
 </html>
+<script>
+$(function() {
+    var ArticleView = Backbone.View.extend({
+        tagName: "li",
+        events: {
+            'click': 'selectArticle'
+       },
+       selectArticle: function() {
+           Backbone.trigger("articles:selected", this.model)
+       },
+        render:function() {
+            this.$el.html(this.model.get("title"))
+            return this;
+        }
+    })
+    
+    var ArticlesView = Backbone.View.extend({
+    tagName: "ul",
+        render: function() {
+        var articles = []
+            this.collection.forEach(function(article) {
+            articles.push(new ArticleView({model:article}).render().el)
+            })
+        this.$el.html(articles)
+        return this;
+        }
+    })
+    var SelectedArticleView = Backbone.View.extend({
+    initialize: function() {
+        this.listenTo(Backbone, "articles:selected", this.selectArticle)  
+        _.bindAll(this, 'saveArticle');
+    },
+    events: {
+        'click input[type=submit]': 'saveArticle'  
+    },
+    saveArticle: function(e) {
+        e.preventDefault();
+        console.log(this)
+    var data = Backbone.Syphon.serialize(this);
+    this.model.set(data)
+    console.log(this.model.isNew())
+    this.model.save()
+    },
+    selectArticle: function(model) {
+      this.model = model;
+      this.render();  
+    },
+        render: function() {
+            if(this.model) {
+                var source = $('#selected_form').html()
+                console.log(source)
+                var template = Handlebars.compile(source);
+                this.$el.html(template(this.model.toJSON()))
+            } 
+            return this
+        }
+    })
+var articles_view = new ArticlesView({collection: articles})
+
+$('#articles').html(articles_view.render().el)
+
+var selected_article = new SelectedArticleView({el: '#selected_article'})
+selected_article.render();
+})
+
+</script>

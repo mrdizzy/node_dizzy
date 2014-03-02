@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{ "_id": "1", "title": "Introduction to node.js", "content": "Content"}, "_id": "2", "title": "Another article", "content": "Some more content here"}]
+=======
+[{ "_id": "1", "title": "Introduction to node.js", "type": "article", "content": "Content"}, {"_id": "2", "title": "Another article", "type": "article", "content": "Some more content here"}]
+>>>>>>> 0ff5ed787291692e93bfa028f19e60b9bd7dc048

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+<link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+<link href="stylesheets/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id="main_container">
+<header>
+<img src="images/logo.svg" />
+</header>
+<section class="line">
+    <img src="images/shell.svg" />
+</section>
+<article>
+<h1>How to: write a jQuery colour picker plugin from scratch</h1>
+<h2><span class="date" style="font-variant:small-caps;font-size:0.75em;letter-spacing:0.05em">Thursday, 8th March 2014</span> <img src="images/swirl.svg" style="margin-left:0.2em;margin-right:0.2em;"/ >In this tutorial, I&rsquo;ll write a jQuery colour picker plugin from scratch. Not just a simple &ldquo;hello world&rdquo; type plugin, but a functional, usable plugin that will be used in a real-world web application&hellip; </h2>
+<p><span class="dropcap">O</span> orem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et quam odio. Suspendisse suscipit nulla nec nisi scelerisque aliquam. Phasellus mattis odio sed varius lacinia. Sed pellentesque et nisi ut malesuada. Nunc rutrum orci et justo laoreet molestie. Vivamus eleifend non quam eu luctus. Cras bibendum porta cursus. Proin nec rutrum ante. Curabitur quis molestie orci. Sed nulla sapien, accumsan quis lectus sed, luctus pellentesque ligula. Maecenas ornare, elit eget vestibulum dignissim, augue orci dignissim purus, non sodales dui neque a nisl. Quisque mattis diam sapien, sit amet egestas mauris imperdiet vitae. Praesent sollicitudin interdum mauris et dignissim.</p>
+
+<h3><span style="display:inline-block;border-bottom:1px solid black;padding-bottom:2em;">The specs</span></h3>
+<ul>
+<li>Take a list of hex colours, with or without descriptive names, and sort them by hue</li>
+<li>Take a default selected colour which will be displayed</li>
+<li>When the default colour is hovered over, a palette of swatches sorted by hue will fade in allowing the user to hover over each swatch in order to change the default selected colour</li>
+<li>The palette of swatches will be paginated to avoid showing too many swatches on screen at one time. The user will be able to click left or right to move through the entire palette of hues</li>
+<li>Emit events. It will emit two events: one when a colour is hovered over, another when a colour is clicked on. Both events will pass the hexcode of the colour to any listeners.</li>
+</ul>
+
+<p>We want to be able to turn an html element into a colour picker by simply calling writing one line ofcode as follows:</p>
+
+
+<pre>
+$('#chosen_div').colorPicker();
+</pre>
+
+
+<h3><span style="display:inline-block;border-bottom:1px solid black;padding-bottom:2em;">Extending the jQuery object</span></h3>
+<p>
+How many times have you used the dollar sign <code>$</code> in jQuery but never stopped to think about what it actually is? First of all, it&rsquo;s shorthand for the <code>jQuery</code> object. Therefore calling <code>$()</code> and <code>jQuery()</code> is exactly the same. Secondly, what are you doing when you&rsquo;re calling <code>$()</code>? Well, you&rsquo;re calling the constructor function of the <code>jQuery</code> object. This constructor function returns an HTML element that is extended with all the magic and sparkle that jQuery&rsquo;s methods provide.
+</p>
+<p>The jQuery object exposes an object accessible via <code>$.fn</code> or <code>jQuery.fn</code>, where all its methods, such as <code>.html()</code> and <code>.append()</code> live. This is jQuery's equivalent of the prototype object, and it&lsquo;s the place where we&lsquo; put our new plugin function. So we need to start by extending the <code>$.fn</code> object. </p>
+</article>
+</div>
+</body>
+</html>
