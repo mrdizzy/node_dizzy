@@ -6,11 +6,13 @@ body { background-image:url('/images/background_pattern.png'); background-size:5
 header { text-align:center;border-top:1px solid black;}
 section.line { margin:0 auto; margin-top:1em;padding-top:3em;border-top:1px solid black; width:85%; text-align:center; padding-bottom:2em;border-bottom:1px solid black;margin-bottom:0;}
 article { margin-left:4em;margin-right:4em;}
-h1 { font: 3.2em normal 'TP';font-weight:500; border-top:1px solid black;border-bottom:1px solid black; margin-top:0.2em;padding-top:0.5em;padding-bottom:1em;}
+h1 { font: 3.2em normal 'TP';font-weight:500; border-top:1px solid black;border-bottom:1px solid black; margin-top:0.2em;padding-top:0.5em;padding-bottom:1em; padding-right:5em;}
 h2 { font: 1.5em normal 'EB Garamond'; line-height:1.3em;margin-right:3em;text-indent:4em;}
 h3 { font: 1.5em normal 'TP'; text-align:center;padding-top:0.25em;padding-bottom:0.25em; }
-p { font: 1.2em normal 'EB Garamond';text-indent:5em;line-height:1.5em;text-indent:0em;margin-top:1.5em;margin-right:3em;}
-pre { font-size:1em;line-height:1.4em; font-family: 'Courier New'}
+p,ul  { font: 1.2em normal 'EB Garamond';text-indent:5em;line-height:1.4em;text-indent:0em;margin-top:1.5em;margin-right:3em;}
+li { margin-bottom:0.5em;}
+pre { padding-left:1em;margin-left:1em;padding-top:0.2em;padding-bottom:0.2em;background-color:#DDD;font-size:1em;line-height:1.4em; font-family: 'Courier New'}
+code {background-color:#DDD;}
 .dropcap{
     float:left;
     margin-top:0.2em;
