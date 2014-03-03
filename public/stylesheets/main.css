@@ -11,7 +11,7 @@ h2 { font: 1.5em normal 'EB Garamond'; line-height:1.3em;margin-right:3em;text-i
 h3 { font: 1.5em normal 'TP'; text-align:center;padding-top:0.25em;padding-bottom:0.25em; }
 p,ul  { font: 1.2em normal 'EB Garamond';text-indent:5em;line-height:1.4em;text-indent:0em;margin-top:1.5em;margin-right:3em;}
 li { margin-bottom:0.5em;}
-pre { padding-left:1em;margin-left:1em;padding-top:0.2em;padding-bottom:0.2em;background-color:#DDD;font-size:1em;line-height:1.4em; font-family: 'Courier New'}
+pre { white-space:pre-wrap;padding-left:1em;margin-left:1em;padding-top:0.2em;padding-bottom:0.2em;background-color:#DDD;font-size:1em;line-height:1.4em; font-family: 'Courier New'}
 code {background-color:#DDD;}
 .dropcap{
     float:left;
@@ -19,3 +19,22 @@ code {background-color:#DDD;}
     font-size:3.5em;
     margin-right:0.1em;
     }
+    
+    
+  @media all and (max-width: 1000px) and (min-width: 768px) {
+  }
+  
+  @media all and (max-width: 999px) and (min-width: 601px) {
+        #main_container { width:90%; }
+      article { margin-left:1em; margin-right:1em;}
+      h1 { padding-right:0; }
+  }
+
+  @media all and (max-width: 600px) and (min-width: 320px) {
+      #main_container { width:95%; }
+      article { margin-left:0.75em; margin-right:0.5em;}
+      h1 { padding-right:0; font-size:2.5em;}
+      p { margin-right:0.25em; }
+      h2 { margin-right:0.5em; }
+      pre { font-size:0.9em; }
+  }
