@@ -1,0 +1,84 @@
+<!doctype html5>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css">
+<link rel="stylesheet" href="/stylesheets/color_picker.css" type="text/css">
+<link rel="stylesheet" href="/stylesheets/plugin.css" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+
+<script src="/javascripts/color_picker.js"></script><script src="/javascripts/colours.js"></script><meta name="viewport" content="initial-scale=1,user-scalable=no">
+</head>
+<body style="margin:0;padding:0;"><div id="main_container" style="padding:1em;">
+    <h1 style="text-align:center;font-size:3.5em;">jQuery Color Swatch Picker</h1>
+    <header>
+    <div>
+        <div id="color_picker" style="min-width:300px;width:60%;margin: 0 auto;margin-bottom:3em;margin-top:3em;"></div>
+        </div>
+    </header>
+    <div style="width:90%;border-top:1px dotted black;margin:0 auto;"></div>
+    <div style="width:33%;float:left;text-align:center;margin-top:2em;"><img src="/images/jquery.svg" style="width:6em"/></div><div style="width:33%;float:left;text-align:center;margin-top:1em;"><img src="/images/spiro.svg" style="width:3.5em"/></div><div style="width:33%;float:left;text-align:center;"></div><div style="width:33%;float:left;text-align:center;"><img src="/images/logo.svg" style="width:4em"/></div>
+
+<div>
+<h2>Introduction</h2>
+<p>This swatch picker provides the following features:</p>
+<ul><li>Hover over a main colour swatch to bring up a grid containing a palette of colours</li>
+<li>Change the main colour swatch by hovering over the smaller swatches in the grid. Each time you hover over a small swatch, an event will also be emitted with the hex code value of the swatch</li>
+<li>Colour grids are paginated and sorted by hue</li>
+<li>You can choose the number of swatches per grid (default is 16) and the number of swatches per row in the grid (default is 4)</li>
+<li>Takes a simple array of hex codes, or if you wish to label the swatches with descriptive names such as "Olive", an object containing key-value pairs where the hex code is the key and the value is the label</li>
+<li>Comes with a list of default colours</li>
+<li>Customise the style of the swatches with CSS</li>
+</ul>
+<h2>Quick start</h2>
+<p>First of all make sure you include jQuery before anything else:</p>
+<pre>
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>Then include the stylesheets:</p>
+<pre>
+&lt;link rel="stylesheet" href="/stylesheets/default.css" type="text/css"&gt;
+</pre>
+<p>Then the color picker file itself:</p>
+<pre>
+&lt;script src="http://www.dizzy.co.uk/javascripts/jquery.color_picker.min.js"&gt;&lt;/script&gt;
+</pre>
+<p>
+Then if you wish to use the default colour list, please include it <i>after</i> the main colour picker file.</p>
+
+<pre>
+&lt;script src="http://www.dizzy.co.uk/javascripts/colour_list.js"&gt;&lt;/script&gt;
+</pre>
+<p>If you do not include the default colour list file, then you will need to pass a list of colours as an option. This can be either an array of hex codes: </p>
+
+<pre>
+["#83434", "#00000", "#00FF00"]
+</pre>
+
+<p>or an object of key-value pairs:</p>
+<pre>
+{ "#000000": "Black",
+  "#FFFFFF": "White }
+</pre>
+<p>We then initialise the plugin on an element:</p>
+<pre style="clear:both;">
+$('#chosen_div').colorPicker({
+    default_selected_color: '#4b5320',
+    colours_per_grid: 16,
+    colours_per_row: 4,
+});
+</pre>
+<p>We can then listen for events on the element when colours are hovered over:</p>
+<pre>
+$('#chosen_div").on("dizzy-cp:hoverColor", function(event, hexcode) {
+    console.log("Colour hexcode hovered is: " + hexcode);
+})
+</pre>
+<h2>Advanced</h2>
+<p></p>
+</div>
+</body>
+
+<script>
+$('#color_picker').colorPicker({default_color: '#32cd32'});
+</script>
+</html>

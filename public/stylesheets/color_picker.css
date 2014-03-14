@@ -1,18 +1,19 @@
-#color_picker { width:50%; border:1px solid black; margin:0 auto;}
+
 .dizzycp-static_container { border:1px solid transparent; border-bottom:0;background-color:white;}
 .dizzycp-swatch_container { text-align:center;}
-.dizzycp-big_colour_square_frame { cursor:pointer; display:inline-block; border:1px solid lightgrey; width:35px; height:35px; padding:2px;}
-.dizzycp-big_colour_square_swatch { width:30px; height:30px;margin:2px;}
-.dizzycp-text_label_for_colour { padding-top:0.25em;padding-bottom:0.25em;font:normal 1em Verdana;text-transform:uppercase;letter-spacing:0.05em;}
+.dizzycp-big_colour_square_frame { cursor:pointer; display:inline-block; border:1px solid lightgrey; width:50px; height:50px; padding:2px;}
+.dizzycp-big_colour_square_swatch { width:45px; height:45px;margin:2px;}
+.dizzycp-text_label_for_colour { padding-top:0.25em;padding-bottom:0.25em;font:normal 2em "CM";}
 
 .dizzycp-container_to_fade_in {width:100%;background-color:white;display:none; position:absolute; border:1px solid transparent;border-top:0;z-index:1;}
 
 .dizzycp-small_swatch_frame { cursor:pointer;border:1px solid lightgrey;display:inline-block;padding:3px;margin:6px; }
 .dizzycp-small_swatch { width:20px; height:20px; }
-    .dizzycp-small_swatch_frame:hover { border-style:dotted;border-color:black;}
+    .dizzycp-small_swatch_frame:hover { border-color:black;border-style:dashed;;}
     
 .dizzycp-selected { border: 1px solid black;}
 .dizzycp-container_selected { border-color:black;border-style:dotted}
+table.dizzycp { width:100%;}
 table.dizzycp td { vertical-align:middle; text-align:center;}
 table.dizzycp .dizzycp-right, table.dizzycp .dizzycp-left { 
     font:normal 3em "Courier New";

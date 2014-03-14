@@ -1,0 +1,18 @@
+@font-face { font-family:"TP"; src: url('/fonts/t.eot?') format('eot'), url('/fonts/t.woff') format('woff'); }
+@font-face { font-family:"Gill"; src: url('/fonts/gmitalic.eot?') format('eot'), url('/fonts/gmitalic.woff') format('woff'); }
+@font-face { font-family:"CM"; src: url('/fonts/cmunrm.eot?') format('eot'), url('/fonts/cmunrm.woff') format('woff'); }
+
+@font-face { font-family:"CT"; src: url('/fonts/cmuntt.eot?') format('eot'), url('/fonts/cmuntt.woff') format('woff'); }
+div { padding:0; margin:0}
+body { padding:0;margin:0;background-image:url('/images/background_pattern.png'); background-size:52px;}
+
+#main_container { padding:0; width:85%;margin:auto;background-color:white;border-left:1px dotted black;border-right:1px dotted black;}
+h1 { font: 2.5em normal 'Gill';border-bottom:1px solid black;border-bottom:1px solid black; padding-top:0.5em; ;}
+h2 {font: 1.5em normal 'Gill'; line-height:1.3em;margin-right:3em;text-indent:1em;border-bottom:1px solid black;padding-bottom:0.5em;margin-bottom:0.5em}
+h3 { font: 1.5em normal 'TP'; text-align:center;padding-top:0.25em;padding-bottom:0.25em; }
+p,ul  { font: 1.1em normal 'CM';text-indent:5em;line-height:1.4em;text-indent:0em;margin-top:0.75em;margin-bottom:0.75em;margin-right:3em;color:#000;}
+
+p.caption { padding-top:0;margin-top:0.25em;font: 1em normal 'CM'; }
+li { margin-bottom:0.5em;list-style-type:square;margin-left:5em;}
+pre { white-space:pre-wrap;padding-left:1em;margin-left:1em;padding-top:0.2em;padding-bottom:0.2em;background-color:#D3EDF2;font-size:1em;line-height:1.4em; font-family: 'CT'}
+code {background-color:#D3EDF2; font-family:"CT";}
